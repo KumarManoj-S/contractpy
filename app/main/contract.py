@@ -28,14 +28,20 @@ class Contract:
     @staticmethod
     def _validate_contract(contract):
         Contract._validate_format(contract)
+        if type(contract) == list:
+            for obj in contract:
+                Contract._validate_contract(obj)
         if type(contract) == dict:
             for key, value in contract.items():
-                if value not in [Types.FLOAT, Types.INTEGER, Types.STRING]:
-                    raise InvalidValue(
-                        f"""Invalid value for the field {key}. Valid values are 
-                            {', '.join(i for i in dir(Types) if not i.startswith('__'))}
-                        """
-                    )
+                if type(value) in [dict, list]:
+                    Contract._validate_contract(value)
+                else:
+                    if value not in [Types.FLOAT, Types.INTEGER, Types.STRING]:
+                        raise InvalidValue(
+                            f"""Invalid value for the field {key}. Valid values are 
+                                {', '.join(i for i in dir(Types) if not i.startswith('__'))}
+                            """
+                        )
 
     def init(self, contract):
         pass
