@@ -8,7 +8,7 @@ class Types:
     FLOAT = 'FLOAT'
 
 
-class Contract:
+class ContractValidator:
     @staticmethod
     def _validate_format(contract):
         valid_formats = [dict, list]
@@ -22,12 +22,12 @@ class Contract:
         if type(contract) == list:
             if len(contract) != 1:
                 raise InvalidValue("More than one value cannot be passed to list")
-            Contract._validate_contract_recursively(contract[0])
+            ContractValidator._validate_contract_recursively(contract[0])
 
         elif type(contract) == dict:
             for key, value in contract.items():
                 if type(value) in [dict, list]:
-                    Contract._validate_contract_recursively(value)
+                    ContractValidator._validate_contract_recursively(value)
                 else:
                     if value not in [Types.FLOAT, Types.INTEGER, Types.STRING]:
                         raise InvalidValue(
@@ -40,9 +40,11 @@ class Contract:
 
     @staticmethod
     def _validate_contract(contract):
-        Contract._validate_format(contract)
-        Contract._validate_contract_recursively(contract)
+        ContractValidator._validate_format(contract)
+        ContractValidator._validate_contract_recursively(contract)
 
     def __init__(self, contract):
         self._validate_contract(contract)
         self.contract = contract
+
+
