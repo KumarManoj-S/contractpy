@@ -1,11 +1,6 @@
 from app.main.exceptions.invalid_format import InvalidFormat
 from app.main.exceptions.invalid_value import InvalidValue
-
-
-class Types:
-    STRING = 'STRING'
-    INTEGER = 'INTEGER'
-    FLOAT = 'FLOAT'
+from app.main.types import Types
 
 
 class ContractValidator:
@@ -42,9 +37,3 @@ class ContractValidator:
     def validate(contract):
         ContractValidator._validate_format(contract)
         ContractValidator._validate_contract_recursively(contract)
-
-    def __init__(self, contract):
-        self.validate(contract)
-        self.contract = contract
-
-

@@ -1,7 +1,6 @@
 from app.main.contract_validator import ContractValidator
 import pytest
-from unittest.mock import patch
-from app.main.contract_validator import Types
+from app.main.types import Types
 
 from app.main.exceptions.invalid_format import InvalidFormat
 from app.main.exceptions.invalid_value import InvalidValue
@@ -71,14 +70,3 @@ def test_validate_contract_raise_exception_for_unecpected_value():
         ContractValidator.validate({"first": 'Double'})
 
     assert str(e.value) == 'Invalid value for the field first. Valid values are FLOAT, INTEGER, STRING.'
-
-
-@patch.object(ContractValidator, 'validate')
-def test_contract_class(mock__validate_contract):
-    mock__validate_contract.return_value = None
-
-    contract = ContractValidator({'test': 'contract'})
-
-    assert contract.contract == {'test': 'contract'}
-    mock__validate_contract.assert_called_once_with({'test': 'contract'})
-
