@@ -58,22 +58,22 @@ def test_validate_contract_returns_none_for_valid_contract():
     ]
 
     for contract in valid_contracts:
-        assert ContractValidator._validate_contract(contract) is None
+        assert ContractValidator.validate(contract) is None
 
 
 def test_validate_contract_raise_exception_for_unecpected_value():
     with pytest.raises(InvalidValue) as e:
-        ContractValidator._validate_contract({"first": 'Double'})
+        ContractValidator.validate({"first": 'Double'})
 
     assert str(e.value) == 'Invalid value for the field first. Valid values are FLOAT, INTEGER, STRING.'
 
     with pytest.raises(InvalidValue) as e:
-        ContractValidator._validate_contract({"first": 'Double'})
+        ContractValidator.validate({"first": 'Double'})
 
     assert str(e.value) == 'Invalid value for the field first. Valid values are FLOAT, INTEGER, STRING.'
 
 
-@patch.object(ContractValidator, '_validate_contract')
+@patch.object(ContractValidator, 'validate')
 def test_contract_class(mock__validate_contract):
     mock__validate_contract.return_value = None
 

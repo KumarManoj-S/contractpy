@@ -39,12 +39,12 @@ class ContractValidator:
                         )
 
     @staticmethod
-    def _validate_contract(contract):
+    def validate(contract):
         ContractValidator._validate_format(contract)
         ContractValidator._validate_contract_recursively(contract)
 
     def __init__(self, contract):
-        self._validate_contract(contract)
+        self.validate(contract)
         self.contract = contract
 
 
