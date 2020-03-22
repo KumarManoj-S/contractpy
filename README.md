@@ -52,7 +52,7 @@ data = {
 assert Contract(my_contract).verify(data) is True
 ~~~~
 
-In case, if you want to specify a list for any field, simple use the [ ] bracket as specified in the field `data`. In such case, it will validate all the values against the contract that are present in the list.
+In case, if you want to specify a list for any field, simple use the [ ] bracket as specified in the field `data`. In such cases, it will validate all the values against the contract that are present in the list.
 
 You could also do the contract testing for the REST APIs using this library.
 For Example,
