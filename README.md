@@ -10,7 +10,7 @@ from pycontract import Contract, Types
 
 my_contract = {
     'name': Types.STRING,
-    'id': Types:INTEGER
+    'id': Types.INTEGER
 }
 contract = Contract(my_contract)
 
@@ -23,7 +23,7 @@ Also, it works for the complicated data like nested dict object (Values in a dic
 ~~~~{.python}
 my_contract = {
     'name': Types.STRING,
-    'id': Types:INTEGER,
+    'id': Types.INTEGER,
     'orders': [
         {
             'orderId': Types:INTEGER,
