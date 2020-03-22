@@ -1,6 +1,6 @@
-# pycontract
+# contractpy
 
-pycontract is a tiny library for validating our data if it conforms to the contract that's specified.
+contractpy is a tiny library for validating our data if it conforms to the contract that's specified.
 
 # Basic usage
 
