@@ -3,13 +3,13 @@ from setuptools import setup, find_packages
 setup(
     name='contractpy',
     packages=find_packages(),
-    version='0.1',
+    version='0.1.1',
     license='MIT',
     description='A tiny library for validating our data if its adhere the contract.',
     author='Manoj Kumar S',
     author_email='kumarmanoj1158@gmail.com',
     url='https://github.com/KumarManoj-S/contractpy',
-    download_url='https://github.com/KumarManoj-S/contractpy/archive/0.1.tar.gz',
+    download_url='https://github.com/KumarManoj-S/contractpy/archive/0.1.1.tar.gz',
     keywords=['contract', 'contract testing', 'template', 'validate'],
     install_requires=[],
     classifiers=[
