@@ -1,9 +1,9 @@
-from app.main.contract_validator import ContractValidator
+from pycontract.main.contract_validator import ContractValidator
 import pytest
-from app.main.types import Types
+from pycontract.main.types import Types
 
-from app.main.exceptions.invalid_format import InvalidFormat
-from app.main.exceptions.invalid_value import InvalidValue
+from pycontract.main.exceptions.invalid_format import InvalidFormat
+from pycontract.main.exceptions.invalid_value import InvalidValue
 
 
 def test_validate_contract_returns_none_for_valid_formats():

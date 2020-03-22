@@ -1,5 +1,5 @@
-from app.main.contract_verifier import ContractVerifier
-from app.main.types import Types
+from pycontract.main.contract_verifier import ContractVerifier
+from pycontract.main.types import Types
 
 
 def test_contract_verifier_for_single_value():

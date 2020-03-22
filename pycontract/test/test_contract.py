@@ -1,9 +1,9 @@
 from unittest.mock import patch
 
-from app.main.contract import Contract
+from pycontract.main.contract import Contract
 
 
-@patch('app.main.contract.ContractValidator')
+@patch('pycontract.main.contract.ContractValidator')
 def test_contract_init(mock_contract_validator):
     mock_contract_validator.validate.return_value = None
 
@@ -13,8 +13,8 @@ def test_contract_init(mock_contract_validator):
     mock_contract_validator.validate.assert_called_once_with("my-contract")
 
 
-@patch('app.main.contract.ContractValidator')
-@patch('app.main.contract.ContractVerifier')
+@patch('pycontract.main.contract.ContractValidator')
+@patch('pycontract.main.contract.ContractVerifier')
 def test_contract_verify(mock_contract_verifier, mock_contract_validator):
     mock_contract_validator.validate.return_value = None
     mock_contract_verifier.verify.return_value = True
