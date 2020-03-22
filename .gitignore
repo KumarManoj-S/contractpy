@@ -3,3 +3,5 @@
 dist/
 MANIFEST
 .pytest_cache
+.DS_Store
+contractpy.egg-info/
