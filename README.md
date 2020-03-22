@@ -2,7 +2,7 @@
 
 pycontract is a tiny library for validating our data if it conforms to the contract that's specified.
 
-# Examples
+# Basic usage
 
 You could simply create a contract object and you could validate your data against the contract.
 ```
