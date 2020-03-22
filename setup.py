@@ -1,8 +1,8 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='contractpy',
-    packages=['contractpy'],
+    packages=find_packages(),
     version='0.1',
     license='MIT',
     description='A tiny library for validating our data if its adhere the contract.',
