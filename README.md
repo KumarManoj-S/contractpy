@@ -18,7 +18,7 @@ assert contract.verify({'name': 'Captain America': 'id': 12345}) is True
 ~~~~
 Yes, it is as simple as this.
 
-Also, it works for the complicated data like nested dict object (Values in a dict object can be another dict object or list of dict objects). In such case, it will recursively iterate over the inner dicts and validate them against the contract. Please check out the below example,
+Also, it works for the complicated data like nested dict object (Values in a dict object can be another dict object or list of dict objects). In such cases, it will recursively iterate over the inner dicts and validate them against the contract. Please check out the below example,
 
 ~~~~{.python}
 my_contract = {
@@ -52,9 +52,9 @@ data = {
 assert Contract(my_contract).verify(data) is True
 ~~~~
 
-In case, if you want to specify a list for any field, simple use the [ ] bracket as specified in the field `data`. In such cases, it will validate all the values against the contract that are present in the list.
+If you want to specify a list for any field, use the square bracets ( [ ] ) bracket as specified in the field `data`. In such cases, it will validate all the values against the contract that are present in the list.
 
-You could also do the contract testing for the REST APIs using this library.
+You could also do the contract testing for the REST APIs using this library. This API contract testing would be more useful in the microservices architecture.
 For Example,
 
 ~~~~{.python}
