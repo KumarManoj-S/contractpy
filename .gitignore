@@ -1,1 +1,5 @@
 .idea
+.cache
+dist/
+MANIFEST
+.pytest_cache
