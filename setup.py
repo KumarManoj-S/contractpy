@@ -11,7 +11,7 @@ setup(
     packages=find_packages(),
     version='0.1.5',
     license='MIT',
-    description='A tiny library for validating our data if its adhere the contract.',
+    description='A tiny library for validating our data if it adhere the contract.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Manoj Kumar S',
