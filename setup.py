@@ -17,7 +17,7 @@ setup(
     author='Manoj Kumar S',
     author_email='kumarmanoj1158@gmail.com',
     url='https://github.com/KumarManoj-S/contractpy',
-    download_url='https://github.com/KumarManoj-S/contractpy/archive/0.1.5.tar.gz',
+    download_url='https://github.com/KumarManoj-S/contractpy/archive/0.1.6.tar.gz',
     keywords=['contract', 'contract testing', 'template', 'validate'],
     install_requires=[],
     classifiers=[
