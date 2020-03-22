@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='contractpy',
     packages=find_packages(),
-    version='0.1.3',
+    version='0.1.4',
     license='MIT',
     description='A tiny library for validating our data if its adhere the contract.',
     long_description=long_description,
@@ -17,7 +17,7 @@ setup(
     author='Manoj Kumar S',
     author_email='kumarmanoj1158@gmail.com',
     url='https://github.com/KumarManoj-S/contractpy',
-    download_url='https://github.com/KumarManoj-S/contractpy/archive/0.1.3.tar.gz',
+    download_url='https://github.com/KumarManoj-S/contractpy/archive/0.1.4.tar.gz',
     keywords=['contract', 'contract testing', 'template', 'validate'],
     install_requires=[],
     classifiers=[
