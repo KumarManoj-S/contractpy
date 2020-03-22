@@ -9,7 +9,7 @@ setup(
     author='Manoj Kumar S',
     author_email='kumarmanoj1158@gmail.com',
     url='https://github.com/KumarManoj-S/pycontract',
-    download_url='https://github.com/KumarManoj-S/pycontract',
+    download_url='https://github.com/KumarManoj-S/pycontract/archive/0.1.tar.gz',
     keywords=['contract', 'contract testing', 'template', 'validate'],
     install_requires=[],
     classifiers=[
