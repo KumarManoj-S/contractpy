@@ -1,14 +1,14 @@
 from distutils.core import setup
 
 setup(
-    name='pycontract',
-    packages=['pycontract'],
+    name='contractpy',
+    packages=['contractpy'],
     version='0.1',
     license='MIT',
     description='A tiny library for validating our data if its adhere the contract.',
     author='Manoj Kumar S',
     author_email='kumarmanoj1158@gmail.com',
-    url='https://github.com/KumarManoj-S/pycontract',
+    url='https://github.com/KumarManoj-S/contractpy',
     download_url='https://github.com/KumarManoj-S/pycontract/archive/0.1.tar.gz',
     keywords=['contract', 'contract testing', 'template', 'validate'],
     install_requires=[],
