@@ -1,6 +1,6 @@
-from pycontract.main.exceptions.invalid_format import InvalidFormat
-from pycontract.main.exceptions.invalid_value import InvalidValue
-from pycontract.main.types import Types
+from contractpy.main.exceptions.invalid_format import InvalidFormat
+from contractpy.main.exceptions.invalid_value import InvalidValue
+from contractpy.main.types import Types
 
 
 class ContractValidator:

@@ -1,5 +1,5 @@
-from pycontract.main.contract_validator import ContractValidator
-from pycontract.main.contract_verifier import ContractVerifier
+from contractpy.main.contract_validator import ContractValidator
+from contractpy.main.contract_verifier import ContractVerifier
 
 
 class Contract:
