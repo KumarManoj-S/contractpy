@@ -58,32 +58,32 @@ You could also do the contract testing for the APIs using this library.
 For Example,
 
 ~~~~{.python}
-    def test_users_api_conforms_the_contract(self):
-        user_api_contract = {
-            'page': Types.INTEGER,
-            'per_page': Types.INTEGER,
-            'total': Types.INTEGER,
-            'total_pages': Types.INTEGER,
-            'data': [
-                {
-                    'id': Types.INTEGER,
-                    'name': Types.STRING,
-                    'year': Types.INTEGER,
-                    'color': Types.STRING,
-                    'pantone_value': Types.STRING
-                }
-            ],
-            'ad': {
-                'company': Types.STRING,
-                'url': Types.STRING,
-                'text': Types.STRING
+def test_users_api_conforms_the_contract():
+    user_api_contract = {
+        'page': Types.INTEGER,
+        'per_page': Types.INTEGER,
+        'total': Types.INTEGER,
+        'total_pages': Types.INTEGER,
+        'data': [
+            {
+                'id': Types.INTEGER,
+                'name': Types.STRING,
+                'year': Types.INTEGER,
+                'color': Types.STRING,
+                'pantone_value': Types.STRING
             }
+        ],
+        'ad': {
+            'company': Types.STRING,
+            'url': Types.STRING,
+            'text': Types.STRING
         }
+    }
 
-        response = requests.get('https://reqres.in/api/user?page=1')
+    response = requests.get('https://reqres.in/api/user?page=1')
 
-        assert response.status_code == 200
-        assert Contract(user_api_contract).verify(response.json()) is True
+    assert response.status_code == 200
+    assert Contract(user_api_contract).verify(response.json()) is True
 ~~~~
 
 Note: Here, the test api is powered by [reqres.in](https://reqres.in/)
