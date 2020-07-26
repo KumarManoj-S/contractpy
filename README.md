@@ -26,8 +26,8 @@ my_contract = {
     'id': Types.INTEGER,
     'orders': [
         {
-            'orderId': Types:INTEGER,
-            'price': Types:FLOAT,
+            'orderId': Types.INTEGER,
+            'price': Types.FLOAT,
         }
     ],
     comments: [Types.String]
